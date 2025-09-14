@@ -61,7 +61,7 @@ function Navbar() {
                 Applied Jobs
               </Link>
               <p>|</p>
-              <p>
+              <p className='max-sm:hidden'>
                 Hi, {user.firstName && user.lastName
                   ? `${user.firstName} ${user.lastName}`
                   : user.firstName

@@ -1,7 +1,8 @@
 // React library se createContext hook import karo
 // Yeh hook components ke beech data share karne ke liye context object banata hai, prop drilling ke baghair
 import { createContext } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { jobsData } from "../assets/assets";
 
 // Ek constant AppContext export karo, jo createContext() ko call karne ka result hai
 // createContext() ek context object banata hai jiska initial value null hota hai (default taur par, kyunki koi argument nahi diya gaya)
@@ -16,12 +17,25 @@ export const AppContextProvider = (props) => {
     location: ''
   });
   const [isSearched, setIsSearched] = useState(false);
+  const [jobs, setJobs] = useState([]); 
+  
+  // Function to fetch jobs
+const fetchJobs = async () => {
+  setJobs(jobsData);
+};
+
+// useEffect hook to fetch jobs on component mount
+useEffect(() => {
+  fetchJobs();
+}, []);// Jobs data ko state mein store karne ke liye
   
 const value = {
     setSearchFilter,  // Function to update search filter
     searchFilter,     // Current search filter object
     isSearched,       // Boolean indicating if search has been performed
-    setIsSearched     // Function to set search status
+    setIsSearched , 
+    jobs, 
+    setJobs  // Function to set search status
   };
   
   return (

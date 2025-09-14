@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from '../components/NAvbar'
 import Hero from '../components/Hero'
 import JobListing from '../components/JobListing'
-// import JobCard from '../components/JobCard'
+import AppDownload from '../components/AppDownload'
+
 
 function Home() {
   return (
@@ -10,7 +11,8 @@ function Home() {
         <Navbar/>
         <Hero/>
         <JobListing/>
-        {/* <JobCard /> */}
+        <AppDownload/>
+      
         </div>
   )
 }
