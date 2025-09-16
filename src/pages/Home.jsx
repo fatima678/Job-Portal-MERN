@@ -3,6 +3,7 @@ import Navbar from '../components/NAvbar'
 import Hero from '../components/Hero'
 import JobListing from '../components/JobListing'
 import AppDownload from '../components/AppDownload'
+import Footer from '../components/Footer'
 
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
         <Hero/>
         <JobListing/>
         <AppDownload/>
+        <Footer/>
       
         </div>
   )
