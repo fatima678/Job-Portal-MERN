@@ -18,6 +18,7 @@ export const AppContextProvider = (props) => {
   });
   const [isSearched, setIsSearched] = useState(false);
   const [jobs, setJobs] = useState([]); 
+  const [showRecruiterLogin, setShowRecruiterLogin] = useState(false);
   
   // Function to fetch jobs
 const fetchJobs = async () => {
@@ -35,7 +36,8 @@ const value = {
     isSearched,       // Boolean indicating if search has been performed
     setIsSearched , 
     jobs, 
-    setJobs  // Function to set search status
+    setJobs ,
+    showRecruiterLogin, setShowRecruiterLogin // Function to set search status
   };
   
   return (
